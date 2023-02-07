@@ -1,6 +1,7 @@
 <?php
-require_once __DIR__ . '/../models/cart.php';
-
+require_once __DIR__ . '/../models/Kennel.php';
+require_once __DIR__ . '/../models/Food.php';
+require_once __DIR__ . '/../models/Cart.php';
 
 $productList = [
     $eridania = new Kennel(new Category('cani'), 'Eridania', 1.50, 'stoffa', '1.3m'),
@@ -11,11 +12,11 @@ $productList = [
 ];
 
 
-$actualCart = new Cart(0, 0);
+// $actualCart = new Cart(0, 0);
 
-foreach ($productList as $item) {
-    $actualCart->addNewProduct();
-    $actualCart->addNewPrice($item->getPrice());
-}
+// foreach ($productList as $item) {
+//     $actualCart->addNewProduct();
+//     $actualCart->addNewPrice($item->getPrice());
+// }
 
-var_dump($actualCart);
+// var_dump($actualCart);

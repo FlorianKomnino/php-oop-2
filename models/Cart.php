@@ -5,6 +5,7 @@ class Cart
 {
     protected $totalPrice;
     protected $quantity;
+    public $numItems;
 
     public function __construct($_initialPrice, $_initialQuantity)
     {
@@ -41,5 +42,10 @@ class Cart
     public function addNewPrice($priceToAdd)
     {
         $this->totalPrice += $priceToAdd;
+    }
+
+    public function __toString()
+    {
+        return floatval($this->totalPrice);
     }
 }
